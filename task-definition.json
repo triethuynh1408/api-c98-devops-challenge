@@ -1,1 +1,54 @@
-{ "containerDefinitions": [ { "name": "api-app", "image": "721896324644.dkr.ecr.ap-southeast-1.amazonaws.com/api-app:6f8212c33112398b73bd680a744dc98f5f5c67a0", "cpu": 1024, "memory": 2048, "portMappings": [ { "containerPort": 4000, "hostPort": 4000, "protocol": "tcp" } ], "essential": true, "environment": [], "mountPoints": [], "volumesFrom": [] } ], "family": "api-app", "executionRoleArn": "arn:aws:iam::721896324644:role/ecs-task-execution-role", "networkMode": "awsvpc", "volumes": [], "placementConstraints": [], "requiresCompatibilities": [ "FARGATE" ], "cpu": "1024", "memory": "2048" }
+{
+    "taskDefinitionArn": "arn:aws:ecs:ap-southeast-1:721896324644:task-definition/api-app:4",
+    "containerDefinitions": [
+        {
+            "name": "api-app",
+            "image": "721896324644.dkr.ecr.ap-southeast-1.amazonaws.com/api-app:6060cb0f2394c26a871c3a1a47b3f631afedecad",
+            "cpu": 1024,
+            "memory": 2048,
+            "portMappings": [
+                {
+                    "containerPort": 4000,
+                    "hostPort": 4000,
+                    "protocol": "tcp"
+                }
+            ],
+            "essential": true,
+            "environment": [],
+            "mountPoints": [],
+            "volumesFrom": []
+        }
+    ],
+    "family": "api-app",
+    "executionRoleArn": "arn:aws:iam::721896324644:role/ecs-task-execution-role",
+    "networkMode": "awsvpc",
+    "revision": 4,
+    "volumes": [],
+    "status": "ACTIVE",
+    "requiresAttributes": [
+        {
+            "name": "com.amazonaws.ecs.capability.ecr-auth"
+        },
+        {
+            "name": "ecs.capability.execution-role-ecr-pull"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+        },
+        {
+            "name": "ecs.capability.task-eni"
+        }
+    ],
+    "placementConstraints": [],
+    "compatibilities": [
+        "EC2",
+        "FARGATE"
+    ],
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "1024",
+    "memory": "2048",
+    "registeredAt": "2023-10-19T22:03:22.135000+07:00",
+    "registeredBy": "arn:aws:iam::721896324644:user/triet-test"
+}
