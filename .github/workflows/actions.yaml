@@ -54,7 +54,7 @@ jobs:
         env:
           NEW_ECR_IMAGE: ${{ steps.build-image.outputs.image }}
         run: |
-          aws ecs describe-task-definition --task-definition api-app --region ap-southeast-1 > task-definition.json
+          aws ecs describe-task-definition --task-definition api-app --query taskDefinition > task-definition.json
           jq -c '.containerDefinitions[0].image = "$NEW_ECR_IMAGE"' task-definition.json > task-def.json
           aws ecs register-task-definition  --family api-app --region ap-southeast-1 --cli-input-json file://task-def.json
 
