@@ -19,7 +19,7 @@ const api_deleteFiles = (req: Request, res: Response) => {
         if (err) throw err;
 
         res.status(200);
-        return res.json({msg: 'Deleted File!'});
+        return res.json({msg: 'Deleted!'});
     });
 }
 

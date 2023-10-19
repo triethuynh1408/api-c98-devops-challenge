@@ -4,7 +4,7 @@ const api_uploadFiles = (req: Request, res: Response) => {
     
     res.status(200);
     return res.json({
-        msg: "Uploaded File!", 
+        msg: "Uploaded!", 
         files: req.files
     });
 }
