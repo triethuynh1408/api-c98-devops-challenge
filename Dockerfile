@@ -2,10 +2,6 @@ FROM node:18-alpine
 
 RUN apk --no-cache add curl
 
-# health check for ECS
-HEALTHCHECK --interval=10m --timeout=5s \
-  CMD curl -f http://localhost:4000/ping || exit 1
-
 WORKDIR /usr/src/app
 
 RUN rm -rf node_modules
