@@ -7,11 +7,11 @@ on:
 
 env:
   AWS_REGION: ap-southeast-1                   # set this to your preferred AWS region, e.g. us-west-1
-  ECR_REPOSITORY: api-app           # set this to your Amazon ECR repository name
-  ECS_SERVICE: api-service                 # set this to your Amazon ECS service name
-  ECS_CLUSTER: api-cluster                 # set this to your Amazon ECS cluster name
-  ECS_TASK_DEFINITION: api-app # set this to your Amazon ECS task definition                                         
-  CONTAINER_NAME: api-app           # set this to the name of the container in the
+  ECR_REPOSITORY: test-app           # set this to your Amazon ECR repository name
+  ECS_SERVICE: test-service                 # set this to your Amazon ECS service name
+  ECS_CLUSTER: test-cluster                 # set this to your Amazon ECS cluster name
+  ECS_TASK_DEFINITION: test-app # set this to your Amazon ECS task definition                                         
+  CONTAINER_NAME: test-app           # set this to the name of the container in the
                                              
 
 jobs:
